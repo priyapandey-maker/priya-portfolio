@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Priya | Computer Engineering Student & AI Builder Portfolio. Katalyst Scholar, hackathon regular, and creator of autonomous agents, trackers, and UI systems.">
+    <title>Priya | Developer Portfolio</title>
+    <!-- Google Fonts: Plus Jakarta Sans for UI, Caveat for handwritten details -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Styling stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Navbar -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">priya<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#competitions" class="nav-link">Hackathons</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link btn-nav-cta">Connect</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay">
+        <button class="mobile-close" aria-label="Close Menu">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#projects" class="mobile-link">Work</a>
+            <a href="#competitions" class="mobile-link">Hackathons</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#contact" class="mobile-link">Connect</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main>
+        
+        <!-- SECTION 1: HERO (Deep Indigo Background) -->
+        <section class="hero-section" id="hero">
+            <!-- Asymmetrical organic glowing backgrounds -->
+            <div class="glow-sphere glow-1"></div>
+            <div class="glow-sphere glow-2"></div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge animate-fade-in">First-Year Computer Engineering</span>
+                    <h1 class="hero-title animate-fade-in">Hi, I'm Priya <span class="wave-emoji">👋</span></h1>
+                    
+                    <div class="hero-typing animate-fade-in">
+                        <span class="static-text">I build </span>
+                        <span class="dynamic-text" id="typed-text"></span>
+                        <span class="caret">&nbsp;</span>
+                    </div>
+                    
+                    <p class="hero-subtext animate-fade-in">
+                        First-year Computer Engineering student (<span class="highlight-underline">9.43 SGPA<svg class="scribble-underline" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0,7 C30,2 70,2 100,7" stroke="var(--amber)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>). I ship AI tools, design systems, and build things just to see if I can. Katalyst Scholar. Hackathon regular. <span class="highlight-circle">Often the only girl in the room — still here.<svg class="scribble-circle" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M2,20 C40,4 160,2 195,15 C202,23 190,35 120,38 C60,40 5,32 3,21" stroke="var(--coral)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
+                    </p>
+                    
+                    <div class="hero-ctas animate-fade-in">
+                        <a href="#contact" class="btn btn-primary">Get in touch</a>
+                        <a href="#projects" class="btn btn-secondary" id="btn-see-work">
+                            See my work
+                            <!-- Custom hand-drawn arrow pointing to CTA -->
+                            <svg class="handwritten-arrow-see-work" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5,15 C10,5 25,5 35,12 C40,16 42,24 35,32 C30,38 20,36 15,30 C11,26 12,18 20,15 C24,14 30,17 31,22 C32,27 28,32 25,32 M22,38 L30,35 L26,28" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <span class="handwritten-note arrow-note">Click to see actual projects!</span>
+                    </div>
+                    
+                    <div class="hero-pills animate-fade-in">
+                        <span class="pill"><i data-lucide="cpu" class="pill-icon"></i> AI / ML</span>
+                        <span class="pill"><i data-lucide="layers" class="pill-icon"></i> Full-stack</span>
+                        <span class="pill"><i data-lucide="palette" class="pill-icon"></i> UI Design</span>
+                        <span class="pill"><i data-lucide="git-branch" class="pill-icon"></i> System Design</span>
+                        <span class="pill pill-featured"><i data-lucide="award" class="pill-icon"></i> Katalyst Scholar</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curve transition separator -->
+            <div class="hero-divider">
+                <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                    <path d="M0,40 C360,90 1080,-10 1440,30 L1440,60 L0,60 Z" fill="#FFFFFF"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT (Clean White Background) -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-layout-about">
+                    <!-- Left: Text -->
+                    <div class="about-main text-reveal">
+                        <span class="section-accent-text">A BUILDER WHO FIGURES THINGS OUT</span>
+                        <h2 class="section-title">Driven by curiosity & shipping real code.</h2>
+                        <p class="about-description">
+                            I'm a first-year CS Engineering student (9.43 SGPA) who learned early that the best way to understand something is to build it. I've made autonomous AI agents, safety apps, carbon trackers, and CSS clones — not because someone assigned them, but because I wanted to know if I could.
+                        </p>
+                        <p class="about-description">
+                            I'm currently deepening my DSA skills, exploring design patterns, and looking for spaces and mentors who actually push me. I don't wait for assignments to start building — I just start.
+                        </p>
+                    </div>
+                    
+                    <!-- Right: Stats Row -->
+                    <div class="about-stats-container">
+                        <!-- Tiny notebook-style scribble block -->
+                        <div class="about-sticky-note">
+                            <span class="handwritten-note sticky-title">Quick Stats 📝</span>
+                            <p class="sticky-sub">Tracking progress in real-time</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card reveal-card">
+                                <div class="stat-icon"><i data-lucide="package"></i></div>
+                                <div class="stat-number">8+</div>
+                                <div class="stat-label">Projects shipped</div>
+                            </div>
+                            <div class="stat-card reveal-card">
+                                <div class="stat-icon"><i data-lucide="terminal"></i></div>
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Hackathons entered</div>
+                            </div>
+                            <div class="stat-card reveal-card">
+                                <div class="stat-icon"><i data-lucide="clock"></i></div>
+                                <div class="stat-number">600+ hrs</div>
+                                <div class="stat-label">Katalyst training</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROJECTS (Organic Grid Layout) -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-accent-text">My Builds & Sandbox</span>
+                    <h2 class="section-title">Projects I've Designed & Shipped</h2>
+                    <p class="section-subtitle">A mix of AI tools, CLI utility programs, front-end visual clones, and mobile concepts.</p>
+                </div>
+                
+                <div class="projects-organic-grid">
+                    
+                    <!-- Project 1 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781798524633.png" alt="Autonomous AI Task Agent interface" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">Autonomous AI Task Agent</h3>
+                                <p class="project-desc">An agent that reasons through complex goals and handles research-heavy tasks autonomously. FAISS vector DB for PDF retrieval, JSON memory for multi-turn context.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">GPT-4o-mini</span>
+                                <span class="tag">FAISS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781796703743.png" alt="Verda Core Platform Dashboard" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">Verda Core</h3>
+                                <p class="project-desc">AI-powered carbon footprint tracker with Gemini-generated insights, RESTful Express backend, SQLite persistence, and a full Jest test suite for core calculations.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Gemini API</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">Jest</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781799842019.png" alt="Student Records System Console Interface" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">Student Records System</h3>
+                                <p class="project-desc">C++ console app with robust Object-Oriented design, modular CRUD operations, and persistent file-based storage for handling large academic datasets.</p>
+                            </div>
+                            <span class="handwritten-note card-accent-note">Command Line 💻</span>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">File Handling</span>
+                                <span class="tag">STL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 (JPMorgan Chase Highlight) -->
+                    <article class="project-card reveal-card project-card-featured">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781798475221.png" alt="My Safe Circle Smart Campus Safety App Interface" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <div class="project-badge-featured"><i data-lucide="award"></i> JPMorgan Chase Hackathon</div>
+                                <h3 class="project-name">My Safe Circle</h3>
+                                <p class="project-desc">Safety & inclusion app for college students — SOS emergency alert button, simplified incident reporting, peer support connection, and student session booking. Designed in Moqups.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Moqups</span>
+                                <span class="tag">UI Design</span>
+                                <span class="tag">Mobile Wireframe</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781783601620.png" alt="To-Do List Interface" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">To-Do List App</h3>
+                                <p class="project-desc">Clean task manager with immediate add, complete, and delete functionalities. Built to practice pure DOM manipulation, dynamic rendering, and local persistence.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Vanilla JS</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">DOM</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781783579831.png" alt="YouTube Clone Static Mockup" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">YouTube Clone (Static)</h3>
+                                <p class="project-desc">Pixel-faithful static recreation of YouTube's homepage. Built to master advanced CSS Flexbox rules, multi-column layout structures, and fluid responsive design patterns.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Flexbox</span>
+                                <span class="tag">Layout</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781799641431.png" alt="Console Journal Manager interface" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">Encrypted Digital Journal</h3>
+                                <p class="project-desc">Command Line interface security tool with custom Caesar Cipher encryption, robust File I/O stream, and defensive input validation to prevent buffer issues.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">Caesar Cipher</span>
+                                <span class="tag">File I/O</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 8 -->
+                    <article class="project-card reveal-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/media__1781798602819.png" alt="Digital Exam Timer utility interface" class="project-img-zoom">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3 class="project-name">Digital Exam Timer</h3>
+                                <p class="project-desc">Real-time web utility with high-precision timing via setInterval and asynchronous JavaScript. Cross-browser compatible, responsive interface.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: COMPETITIONS / HACKATHONS & IDEATHONS -->
+        <section class="competitions-section" id="competitions">
+            <!-- Semi-diagonal background transition -->
+            <div class="section-divider-top"></div>
+            
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-accent-text text-white">Innovation & Pitches</span>
+                    <h2 class="section-title text-white">Hackathons & Ideathons</h2>
+                    <p class="section-subtitle text-light">Competing, ideating, and building under pressure.</p>
+                </div>
+                
+                <div class="timeline-container">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item reveal-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2026</span>
+                                <span class="timeline-location"><i data-lucide="map-pin"></i> India.Runs Ideathon</span>
+                            </div>
+                            <h3 class="timeline-title">Redrob Code: Developer Edition</h3>
+                            <p class="timeline-role">Track 3 (Everyday AI Innovation Challenge) • Team Lead</p>
+                            <p class="timeline-desc">
+                                Designed a VS Code extension concept using Abstract Syntax Tree (AST) analysis to auto-generate verified developer profiles based on real coding activities. Led the system architecture design and drafted the final pitch deck.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge-tag">AST Analysis</span>
+                                <span class="timeline-badge-tag">AI Concept</span>
+                                <span class="timeline-badge-tag">Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item reveal-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2026</span>
+                                <span class="timeline-location"><i data-lucide="award"></i> JPMorgan Chase</span>
+                            </div>
+                            <h3 class="timeline-title">My Safe Circle</h3>
+                            <p class="timeline-role">JPMorgan Chase Hackathon • Safety & Inclusion Track</p>
+                            <p class="timeline-desc">
+                                Created a full interactive mobile wireframe in Moqups. The design centered on student emergency SOS assistance, anonymous incident tracking, academic-peer support matching, and scheduled session requests.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge-tag">Moqups</span>
+                                <span class="timeline-badge-tag">Wireframing</span>
+                                <span class="timeline-badge-tag">Accessibility</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item reveal-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2026</span>
+                                <span class="timeline-location"><i data-lucide="map-pin"></i> EduConnect India</span>
+                            </div>
+                            <h3 class="timeline-title">Career GPS</h3>
+                            <p class="timeline-role">EduConnect India Ideathon • Team Architecture Lead</p>
+                            <p class="timeline-desc">
+                                Designed an education-to-career utility platform that integrates central systems like APAAR ID, DigiLocker, Bhashini translation API, and Academic Bank of Credits (ABC). Designed the overall multi-page frontend UI layouts.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge-tag">API Integration</span>
+                                <span class="timeline-badge-tag">System Design</span>
+                                <span class="timeline-badge-tag">GovTech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- SECTION 5: SKILLS -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-accent-text">What I work with</span>
+                    <h2 class="section-title">Technical Skills & Tooling</h2>
+                    <p class="section-subtitle">Languages, databases, frameworks, and developer workflows I use daily.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    
+                    <!-- Languages -->
+                    <div class="skills-category-card reveal-card" style="--accent-color: #fb923c; --accent-bg: rgba(251, 146, 60, 0.15); --accent-border: rgba(251, 146, 60, 0.3);">
+                        <div class="skills-category-header">
+                            <span class="category-icon">&lt;/&gt;</span>
+                            <h3>Languages</h3>
+                            <span class="category-number">01</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- AI / ML -->
+                    <div class="skills-category-card reveal-card" style="--accent-color: #a78bfa; --accent-bg: rgba(167, 139, 250, 0.15); --accent-border: rgba(167, 139, 250, 0.3);">
+                        <div class="skills-category-header">
+                            <span class="category-icon">✦</span>
+                            <h3>AI / ML</h3>
+                            <span class="category-number">02</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">Gemini API</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">FAISS</span>
+                            <span class="skill-tag">RAG Architecture</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skills-category-card reveal-card" style="--accent-color: #34d399; --accent-bg: rgba(52, 211, 153, 0.15); --accent-border: rgba(52, 211, 153, 0.3);">
+                        <div class="skills-category-header">
+                            <span class="category-icon">⬡</span>
+                            <h3>Backend</h3>
+                            <span class="category-number">03</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">SQLite</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend & Design -->
+                    <div class="skills-category-card reveal-card" style="--accent-color: #38bdf8; --accent-bg: rgba(56, 189, 248, 0.15); --accent-border: rgba(56, 189, 248, 0.3);">
+                        <div class="skills-category-header">
+                            <span class="category-icon">⊞</span>
+                            <h3>Frontend & Design</h3>
+                            <span class="category-number">04</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Vanilla JS</span>
+                            <span class="skill-tag">CSS Flexbox / Grid</span>
+                            <span class="skill-tag">Streamlit</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Moqups</span>
+                            <span class="skill-tag">Visily</span>
+                        </div>
+                    </div>
+
+                    <!-- Core CS -->
+                    <div class="skills-category-card reveal-card" style="--accent-color: #f472b6; --accent-bg: rgba(244, 114, 182, 0.15); --accent-border: rgba(244, 114, 182, 0.3);">
+                        <div class="skills-category-header">
+                            <span class="category-icon">∑</span>
+                            <h3>Core CS</h3>
+                            <span class="category-number">05</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">OOP Concepts</span>
+                            <span class="skill-tag">Basic DSA</span>
+                            <span class="skill-tag">File Handling</span>
+                            <span class="skill-tag">STL (C++)</span>
+                            <span class="skill-tag">CRUD Operations</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skills-category-card reveal-card" style="--accent-color: #facc15; --accent-bg: rgba(250, 204, 21, 0.15); --accent-border: rgba(250, 204, 21, 0.3);">
+                        <div class="skills-category-header">
+                            <span class="category-icon">⌘</span>
+                            <h3>Tools & Workflow</h3>
+                            <span class="category-number">06</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">JSON Storage</span>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="skills-footer-note">
+                    <span>Continuous learning! ✏️</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CONTACT -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-container">
+                
+                <div class="contact-card reveal-card">
+                    <span class="section-accent-text">Let's connect</span>
+                    <h2 class="contact-title">Interested in working together or just talking tech?</h2>
+                    <p class="contact-subtext">Open to internships, collaborations, and communities that push me to grow.</p>
+                    
+                    <div class="contact-links-grid">
+                        
+                        <a href="mailto:priyapandey9146@gmail.com" class="contact-btn email-btn">
+                            <div class="contact-btn-icon"><i data-lucide="mail"></i></div>
+                            <div class="contact-btn-text">
+                                <span class="btn-label">Email Me</span>
+                                <span class="btn-value">priyapandey9146@gmail.com</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </a>
+
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn">
+                            <div class="contact-btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
+                            <div class="contact-btn-text">
+                                <span class="btn-label">LinkedIn</span>
+                                <span class="btn-value">Connect on LinkedIn</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </a>
+
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-btn github-btn">
+                            <div class="contact-btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></div>
+                            <div class="contact-btn-text">
+                                <span class="btn-label">GitHub</span>
+                                <span class="btn-value">Explore repositories</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </a>
+                        
+                    </div>
+                    
+                    <!-- Extra handwritten touch in contact footer -->
+                    <div class="contact-footer-note">
+                        <span class="handwritten-note">I reply within 24 hours! ⚡</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Priya. Made with passion & vanilla code.</p>
+            <div class="footer-back-to-top">
+                <a href="#hero" aria-label="Back to Top"><i data-lucide="arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript script -->
+    <script src="script.js"></script>
+</body>
+</html>
