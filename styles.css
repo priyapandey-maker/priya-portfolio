@@ -728,8 +728,8 @@ button {
 
 .project-card:hover {
     transform: translateY(-4px) translate(-2px, -2px);
-    box-shadow: 10px 10px 0px var(--amber);
-    border-color: var(--amber);
+    box-shadow: 10px 10px 0px var(--hover-shadow-color, var(--amber));
+    border-color: var(--hover-shadow-color, var(--amber));
 }
 
 .placeholder-icon {
